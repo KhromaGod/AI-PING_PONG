@@ -9,7 +9,7 @@
     float: right;
     border: 1px solid white;
 }
-#start, #status{
+#start, #status, #restart{
     font-size: 22px;
 }
 #canvas{
@@ -17,4 +17,18 @@
     border-radius:20px;
     width: 500px;
     height: 500px;
+    box-shadow:5px 5px 5px lavender
+}
+.modal-dialog{
+    width:70%;
+}
+.modal-body{
+    text-align:left;
+    font-size:20px;
+}
+.footer{
+    background-color:grey;
+    color:whitesmoke;
+    line-height:2;
+    margin-bottom:0;
 }
