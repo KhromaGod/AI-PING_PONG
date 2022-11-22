@@ -14,9 +14,9 @@
 }
 #canvas{
     border:5px solid whitesmoke;
-    border-radius:20px;
-    width: 500px;
-    height: 500px;
+    border-radius:0px;
+    width: 715px;
+    height: 600px;
     box-shadow:5px 5px 5px lavender
 }
 .modal-dialog{
