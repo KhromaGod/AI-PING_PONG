@@ -20,7 +20,9 @@ var ball = {
     dx:3,
     dy:3
 }
-
+rightwristX=0;
+rightwristY=0;
+scoreRightWrist=0;
 function setup(){
   var canvas =  createCanvas(700,600);
   canvas.parent("canvas");
@@ -33,9 +35,23 @@ function setup(){
 function modelLoaded(){
   console.log("PoseNet is initialized")
 }
+function gotPoses(results){
+if(results.length>0){
+  rightwristX=results[0].pose.rightWrist.x;
+  rightwristY=results[0].pose.rightWrist.y;
+  scoreRightWrist=results[0].pose.keypoints[10].score;
+console.log(scoreRightWrist);
+
+}
+}
 
 function draw(){
 
+  if(scoreRightWrist>0.2){
+    fill("red");
+    stroke("red");
+    circle(rightwristX,rightwristY, 30);
+  }
  background(0); 
 image(video, 0, 0, 700, 600)
  fill("black");
