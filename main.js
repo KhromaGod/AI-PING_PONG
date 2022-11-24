@@ -53,11 +53,6 @@ console.log(scoreRightWrist);
 function draw(){
 if(game_status=="start"){
 
-  if(scoreRightWrist>0.2){
-    fill("red");
-    stroke("red");
-    circle(rightwristX,rightwristY, 30);
-  }
  background(0); 
 image(video, 0, 0, 700, 600)
  fill("black");
@@ -68,6 +63,11 @@ image(video, 0, 0, 700, 600)
  stroke("black");
  rect(0,0,20,700);
  
+ if(scoreRightWrist > 0.2){
+  fill("red");
+  stroke("red");
+  circle(rightwristX,rightwristY, 30);
+}
    //funtion paddleInCanvas call 
    paddleInCanvas();
  
