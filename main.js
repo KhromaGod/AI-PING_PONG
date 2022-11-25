@@ -25,8 +25,8 @@ rightwristY=0;
 scoreRightWrist=0;
 game_status="";
 function preload(){
-  ball_touch_paddle=loadsound("ball_touch_paddle.wav")
-  missed_sound=loadsound("missed.wav")
+  ball_touch_paddle=loadSound("ball_touch_paddle.wav");
+  missed=loadSound("missed.wav");
 }
 function setup(){
   var canvas =  createCanvas(700,600);
@@ -158,7 +158,7 @@ function move(){
   }
   else{
     pcscore++;
-    missed_sound.play();
+    missed.play();
     reset();
     navigator.vibrate(100);
   }
